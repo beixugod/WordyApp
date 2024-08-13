@@ -110,8 +110,8 @@ class GameGUI:
                 RankGUI.RankGUI(self.wordy_game, self.username, self.room_name)
                 self.root.destroy()
             else:
-                self.root.withdraw()
                 ResultGUI.ResultGUI(self.wordy_game, self.room_name, self.username)
+                self.root.withdraw()
                 self.root.destroy()
 
     def click_shuffle(self):

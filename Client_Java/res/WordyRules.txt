@@ -1,0 +1,22 @@
+1. The game displays 17 random letters to all players where
+the goal of each player is to send a single valid word, with at
+least five (5) letters, that can be formed from the letters sent
+by the server.
+
+2. A letter in the 17 random letters may be repeated.
+
+3. If the word formed and sent by the player is less than
+five letters or the word formed is not valid it will prompt an
+error that says "Invalid Word Formed!"
+
+4. Each player can submit as many words as possible within
+10 seconds.
+
+5. The player that has submitted the longest valid word will 
+be declared the winner for a given round.
+
+6. No winner will be declared for a given round if two or more 
+players have submitted the same length of letters or if the players 
+were not able to send a valid word.
+
+7. First player to win 3 rounds will be declared the eventual winner.

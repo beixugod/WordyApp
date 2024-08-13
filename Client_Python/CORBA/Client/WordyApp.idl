@@ -1,0 +1,31 @@
+module WordyApp{
+
+    exception InvalidCredentials {
+        string message;
+    };
+
+    exception UserActive {
+        string message;
+    };
+
+    typedef sequence<string> array;
+
+    interface WordyGame{
+
+      void login(in string username, in string password) raises (InvalidCredentials, UserActive);
+      void logout(in string username);
+      boolean register(in string username, in string password);
+
+      array getFiveLongestWords();
+      array getTopFivePlayers();
+
+      void startNewWaitingRoom();
+      boolean joinWaitingRoom(in string username);
+      void leaveGameRoom(in string username, in string roomName);
+      array getWaitingRoomInformation();
+
+      boolean submitWord(in string inputString, in string username, in long roundNumber, in string roomName);
+      boolean endRound(in string username, in string roomName);
+      array getGameRoomInformation(in string roomName, in string username);
+    };
+};
